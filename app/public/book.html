@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title>Hayley HTML 1</title>
+  <link rel="stylesheet" href="/css/site.css">
+  
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+<body>
+    <!-- Header --> 
+    <header><h1><a href="index.html">Hayley HTML 1</a></h1></header>
+    <!-- Navigation -->
+	
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item ">
+              <a class="nav-link" href="index.html">Home </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="user.html">About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="book.html">Books</a>
+              </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          </form>
+        </div>
+      </nav>
+    <table id="taskTable">
+        <tr>
+        <thead>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Year Published</th>
+            <th>Publisher</th>
+            <th>Page Count</th>
+            <th>MSRP</th>
+        </thead>
+        </tr>
+        <tr>
+            <td>The Rat House</td>
+            <td>Madison Meurer</td>
+            <td>2019</td>
+            <td>Houterloot</td>
+            <td>169</td>
+            <td>10.99</td>
+        </tr>
+        <tr>
+            <td>How to Skip</td>
+            <td>Melanie Wick</td>
+            <td>2003</td>
+            <td>Red Squared</td>
+            <td>5</td>
+            <td>2.99</td>
+        </tr>
+        <tr>
+            <td>The Waterlong</td>
+            <td>Claire Baker</td>
+            <td>2020</td>
+            <td>Tenzin</td>
+            <td>78</td>
+            <td>4.50</td>
+        </tr>
+    </table>
+    <form>
+        <label for="title">Title:</label> &nbsp;
+        <input type="text" id="title" name="title">
+        <br>
+        <label for="author">Author:</label> &nbsp;
+        <input type="text" id="author" name="author">
+        <br>
+        <label for="published">Year Published:</label> &nbsp;
+        <input type="text" id="published" name="published">
+        <br>
+        <label for="publisher">Publisher:</label> &nbsp;
+        <input type="text" id="publisher" name="publisher">
+        <br>
+        <label for="page">Page Count:</label> &nbsp;
+        <input type="text" id="page" name="page">
+        <br>
+        <label for="msrp">MSRP:</label> &nbsp;
+        <input type="text" id="msrp" name="msrp">
+        <br>
+        <br>
+        <button class="submit">Submit</button>
+    </form>
+    <!-- Table sort plug in from http://tristen.ca/tablesort/demo/ -->
+    <script src="js/tablesort.min.js"></script>
+    <script>
+      new Tablesort(document.getElementById('taskTable'));
+    </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</body>
+</html>
