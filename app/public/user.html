@@ -41,26 +41,29 @@
   </nav>
     <main>
         <div class="introduction">
-            <a href="https://www.eikonphoto.com/male-headshots/"><img src="images/random.jpg" alt="picture"></a>
-             <!--Image from https://www.eikonphoto.com/male-headshots/-->
-            <h2>Name: Bryan Ross</h2>
-            <br>
-            <p>From: Kentucky, USA</p>
-            <p>Birth Date: June 12, 1964</p>
-            <p>Age: 56</p>
-            <p>Email: <a href="mailto:bryanross@gmail.com">BryanRoss@gmail.com</a></p>
-
+          
+            <div id="userProfile">
+              <a v-bind:href="userImgLarge">
+                <img v-bind:src="userImgThumb">
+              </a>
+              <h2>Name: {{userName}}</h2>
+              <h3>From: {{userLocation}}</h3>
+              <h3>Birth Date: {{formatDate(userDate)}}</h3>
+              <h3>Age: {{userAge}}</h3>
+              <h3>Email: <a v-bind:href="'mailto:'+userEmail">{{userEmail}}</h3>
+                
+            </div>
 
         </div>
     </main>
         <!-- Table sort plug in from http://tristen.ca/tablesort/demo/ -->
 
-    <script src="js/tablesort.min.js"></script>
-    <script>
-      new Tablesort(document.getElementById('taskTable'));
-    </script>
+    
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.28.0/moment.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="js/user.app.js"></script>
+    
 </body>
 </html>

@@ -20,14 +20,14 @@ header a:hover {
 
 
   /* Introduction Page */
-img{
+/*img{
     height: 5cm;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     flex-direction: row;
     margin: 1cm;
-}
+}*/
 .introduction {
     padding: 4em;
     display: flex;
