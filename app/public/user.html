@@ -41,7 +41,7 @@
   </nav>
     <main>
         <div class="introduction">
-          
+          <form v-on: submit.prevent="fetchUser()">
             <div id="userProfile">
               <a v-bind:href="userImgLarge">
                 <img v-bind:src="userImgThumb">
@@ -51,9 +51,10 @@
               <h3>Birth Date: {{formatDate(userDate)}}</h3>
               <h3>Age: {{userAge}}</h3>
               <h3>Email: <a v-bind:href="'mailto:'+userEmail">{{userEmail}}</h3>
-                
+              <button type="submit">Reload</button> 
             </div>
-
+            
+          </form>
         </div>
     </main>
         <!-- Table sort plug in from http://tristen.ca/tablesort/demo/ -->
