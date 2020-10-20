@@ -1,10 +1,9 @@
 waitingApp = new Vue({
-    el: 'randomUsersID',
+    el: 'Comments',
     data:{
         users: [{
-            firstName: '',
-            lastName: '',
-            userID: ''
+            Id: '',
+            commentText: '',
         }]
 
     },
