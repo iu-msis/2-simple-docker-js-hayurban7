@@ -1,0 +1,15 @@
+{
+    "name": "iu-msis/2-simple-docker-js-hayurban7",
+    "description": "An in-class example project",
+    "license": "private",
+    "authors": [{
+        "name": "Hayley Urban"
+    }],
+    "require": {
+      "ramsey/uuid": "^4.1"
+    },
+    "autoload": {
+        "classmap": ["class/DbConnection.php"]
+    }
+}
+
