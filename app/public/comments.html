@@ -44,25 +44,38 @@
         </div>
       </nav>
       <main>
-       <div class="container-fluid">
-           <div class="row" id="Comments">
-               <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
-                   <div class="users" v-for="user in users">
-                       <span class="ID">Id: {{comments.Id}}</span>,<br/>
-                       <span class="commentText">User Id: {{comments.commentText}}</span>,
-                   </div><br/>
-               </div>
-           </div>
-
+        <div class="container-fluid">
+          <div class="row" id="Comments">
+              <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                <h2>Comments</h2>
+                <div class="users" v-for="comment in users">
+                        <table id="commentTable">
+                          <tbody id="commentTableBody">
+                            <tr>
+                                <td>{{ comment.Id }}</td>
+                                <td>{{ comment.commentText }}</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        <form v-on:submit.prevent="createComment()">
+                          <div class="comments">
+                            <label for="commentText"> Comment Input</label>
+                            <input type="text" v-model="newComment.commentText" class=form-control id="commentText">
+                          </div>
+                            <input type="submit" value="Create Comment" class="button">
+                        </form>
+                </div>
+            </div>
+          </div>
+          </div>
        </div>
       </main>
           
-      <script>
-        new Tablesort(document.getElementById('taskTable'));
-      </script>
       <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
       <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+      <script src="js/details.app.js"></script>
     </body>
     </html>
     

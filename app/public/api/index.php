@@ -4,11 +4,11 @@ require 'common.php';
 
 $db = DbConnection::getConnection();
 
-$sql = 'SELECT * FROM Comments';
+$sql = 'SELECT * FROM comments';
 $vars = [];
 
 if (isset($_GET['Id'])){
-    $sql = 'SELECT * FROM Comments WHERE Id = ?';
+    $sql = 'SELECT * FROM comments WHERE Id = ?';
     $vars = [$_GET['Id']];
 }
 
