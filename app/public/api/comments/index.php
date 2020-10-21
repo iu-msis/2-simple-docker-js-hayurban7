@@ -7,7 +7,7 @@ $db = DbConnection::getConnection();
 $sql = 'SELECT * FROM Comments';
 $vars = [];
 
-if (isset($_GET['userId'])){
+if (isset($_GET['Id'])){
     $sql = 'SELECT * FROM Comments WHERE Id = ?';
     $vars = [$_GET['Id']];
 }
