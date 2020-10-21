@@ -14,7 +14,7 @@ waitingApp = new Vue({
 
     methods:{
         fetchUser(){
-            fetch('api/index.php')
+            fetch('api/comments/index.php')
             .then(response => response.json())
             .then(json => {
                 this.users=json;
@@ -22,7 +22,7 @@ waitingApp = new Vue({
             });
         },
         createComment(){
-            fetch('api/create.php', {
+            fetch('api/comments/create.php', {
                 method:'POST',
                 body:JSON.stringify(this.newComment),
                 headers: {
